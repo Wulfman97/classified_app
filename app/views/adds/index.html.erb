@@ -1,11 +1,11 @@
 <h1> Ads </h1>
+<h2><%= link_to 'New Ad', new_add_path %></h2>
 <% @adds.each do |add| %>
 <h2><%= add.title %></h2>
 <h3><%= add.author %></h3>
 <p><%= add.body %></p>
 <p><%= add.contact %></p>
 <%= link_to 'Show Ad', add_path(add) %>
-<p><%= link_to 'New Ad', new_add_path %></p>
 <p><%= link_to 'Edit Ad', edit_add_path(add) %></p>
 <p><%= link_to 'Destroy Ad', add, method: :delete %></p>
 <% end %>

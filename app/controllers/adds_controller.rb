@@ -12,7 +12,7 @@ class AddsController < ApplicationController
   end
 
   def create
-    @add = add.new(add_params)
+    @add = Add.new(add_params)
       if @add.save 
         redirect_to adds_path
       else
