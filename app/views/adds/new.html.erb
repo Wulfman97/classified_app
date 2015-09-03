@@ -1,0 +1,12 @@
+<h1> New Ad </h1>
+<%= form_for @add do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :author %>
+<%= f.text_field :author %>
+<%= f.label :body %>
+<%= f.text_field :body %>
+<%= f.label :contact %>
+<%= f.text_field :contact %>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,9 @@
+<h1> Ads </h1>
+<% @adds.each do |add| %>
+<h2><%= add.title %></h2>
+<h3><%= add.author %></h3>
+<p><%= add.body %></p>
+<p><%= add.contact %></p>
+<%= link_to 'Show Ad', add_path(add) %>
+<p><%= link_to 'New Ad', new_add_path %></p>
+<% end %>
