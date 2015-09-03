@@ -13,7 +13,8 @@ class AddsController < ApplicationController
 
   def create
     @add = add.new(add_params)
-      if @add.save redirect_to adds_path
+      if @add.save 
+        redirect_to adds_path
       else
       render :new
     end 
@@ -23,9 +24,24 @@ class AddsController < ApplicationController
     @add = Add.find(params[:id])
   end
 
+  def update
+    @add = Add.find(params[:id])
+    if @add.update(add_params) 
+      redirect_to adds_path
+    else
+      render :edit
+    end 
+  end
+
+  def destroy
+    @add = Add.find(params[:id]) 
+    @add.destroy
+    redirect_to adds_path
+  end
+
   private
 
-  def post_params
+  def add_params
     params.require(:add).permit(:title, :author, :body, :contact)
   end
 end

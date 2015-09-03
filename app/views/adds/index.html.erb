@@ -6,4 +6,6 @@
 <p><%= add.contact %></p>
 <%= link_to 'Show Ad', add_path(add) %>
 <p><%= link_to 'New Ad', new_add_path %></p>
+<p><%= link_to 'Edit Ad', edit_add_path(add) %></p>
+<p><%= link_to 'Destroy Ad', add, method: :delete %></p>
 <% end %>
